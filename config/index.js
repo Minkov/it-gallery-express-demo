@@ -6,7 +6,8 @@ let express = require('express'),
   mongoose = require('mongoose');
 
 module.exports = function(app) {
-  let connectionString = "mongodb://localhost/it-gallery";
+  // let connectionString = "mongodb://localhost/it-gallery";
+  let connectionString = "mongodb://academy:123456q@ds043615.mongolab.com:43615/it-gallery";
   mongoose.connect(connectionString);
 
   app.use(express.static(path.join(__dirname, '../public')));
