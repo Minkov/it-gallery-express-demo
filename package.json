@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "postinstall": "bower install"
+    "postinstall": "node ./node_modules/bower/bin/bower install"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.14.2",
+    "bower": "^1.7.2",
     "express": "^4.13.3",
     "jade": "^1.11.0",
     "mongoose": "^4.3.5",
