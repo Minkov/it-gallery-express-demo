@@ -1,0 +1,11 @@
+.pagination a {
+  font-size: 1.3em
+}
+.pagination .current{
+  background-color: #ccc;
+  color: white;
+}
+
+.product-add-new{
+  font-size:1.5em;
+}

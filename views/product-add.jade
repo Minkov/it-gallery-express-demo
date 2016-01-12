@@ -1,0 +1,37 @@
+//- view/product-add.jade
+extend layout
+
+block content
+  h1 Add new product
+
+  form.form-horizontal(action="/products", method="POST", enctype="multipart/form-data")
+  
+    .form-group
+      label.col-sm-2.control-label(for="tb-name")
+        | Name:
+      .col-sm-10
+        input.form-control#tb-name(name="name", placeholder="Name")
+    .form-group
+      label.col-sm-2.control-label(for="tb-description")
+        | Description:
+      .col-sm-10
+        input.form-control#tb-description(name="description", placeholder="Description")
+    .form-group
+      label.col-sm-2.control-label(for="tb-price")
+        | Price:
+      .col-sm-10
+        input.form-control#tb-price(type="number", name="price", placeholder="Price")
+    .form-group
+      label.col-sm-2.control-label(for="tb-image")
+        | Image:
+      .col-sm-10
+        input.form-control#tb-image(type="text", name="image", placeholder="Image url")
+    .form-group
+      label.col-sm-2.control-label(for="tb-image-file")
+        | Image Upload:
+      .col-sm-10
+        input.form-control#tb-image-file(type="file", name="image-file", placeholder="Image url")
+    .form-group
+      button.btn.btn-primary.col-sm-12 Add product
+      
+  

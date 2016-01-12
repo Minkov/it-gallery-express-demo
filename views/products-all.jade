@@ -1,0 +1,41 @@
+//- view/products-all.jade
+extend layout
+
+block head
+  style
+    | img{width: 100px}
+
+block content
+  h1
+    | Products
+  
+  .product-add-new
+    a.btn.btn-success(href="/products/add")
+      | Add new product
+    
+  ul.pagination
+    - for(var i = 1; i <= pages; i++)
+      li
+        if i == page
+          a.current(href="/products?page=" + i)
+            =i
+        else
+          a(href="/products?page=" + i)
+            =i
+    
+  ul.media-list
+    each product in data
+      li.media
+        .media-left
+          a
+            if product.image
+              img.media-object(src=product.image)
+            else
+              img.media-object(src="images/product-default.jpg")
+        .media-body
+          h2.media-heading= product.name
+          p= product.description
+          em= product.date
+          br
+          a.btn(href='/products/' + product._id)
+            | View details
